@@ -1,0 +1,22 @@
+﻿CodDiagnostico;Nombre;Descripcion
+D001;Hipertensión arterial;Presión arterial persistentemente elevada
+D002;Diabetes mellitus tipo 2;Alteración en la regulación de la glucosa en sangre
+D003;Asma;Enfermedad respiratoria que provoca inflamación y estrechamiento de las vías aéreas
+D004;Migraña;Tipo de dolor de cabeza recurrente que puede acompañarse de náuseas y sensibilidad a la luz
+D005;Gastritis;Inflamación del revestimiento del estómago
+D006;Anemia;Disminución de hemoglobina o glóbulos rojos en la sangre
+D007;Bronquitis;Inflamación de los bronquios
+D008;Artritis;Inflamación de una o varias articulaciones
+D009;Rinitis alérgica;Reacción alérgica que afecta la mucosa nasal
+D010;Dermatitis;Inflamación de la piel
+D011;Infección urinaria;Infección que afecta alguna parte del sistema urinario
+D012;Neumonía;Infección que inflama los sacos de aire de uno o ambos pulmones
+D013;Hipotiroidismo;Producción insuficiente de hormonas tiroideas
+D014;Osteoporosis;Disminución de la densidad y resistencia de los huesos
+D015;Reflujo gastroesofágico;Retorno del contenido del estómago hacia el esófago
+D001;Diagnóstico duplicado;Registro con código ya existente para probar duplicados
+D016;;Diagnóstico sin nombre para probar campos vacíos
+;Código vacío;Registro sin identificador
+D017; ;Descripción vacía;Descripción omitida para probar campos incompletos
+D018;Infección de prueba;Descripción con texto;adicional
+D020;Racismo;Es negro
