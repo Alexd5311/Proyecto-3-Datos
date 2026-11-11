@@ -391,7 +391,7 @@ public:
     }
 };
 
-void ReporteMedicos(ArbolBMedicos& Medicos) {
+inline void ReporteMedicos(ArbolBMedicos& Medicos) {
     GeneradorPDF pdf("Reporte_Medicos.pdf", "REPORTE DE MEDICOS",
         Rellenar("ID", 8) + Rellenar("NOMBRE", 28) + Rellenar("TELEFONO", 14)
         + Rellenar("CORREO", 36) + Rellenar("ESPEC.", 8));
@@ -409,7 +409,7 @@ void ReporteMedicos(ArbolBMedicos& Medicos) {
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteMedicosPorEspecialidad(ArbolBMedicos& Medicos) {
+inline void ReporteMedicosPorEspecialidad(ArbolBMedicos& Medicos) {
     int IdEspecialidad;
     cout << "Ingrese el IdEspecialidad: ";
     cin >> IdEspecialidad;
@@ -432,7 +432,7 @@ void ReporteMedicosPorEspecialidad(ArbolBMedicos& Medicos) {
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void CargarMedicos(ArbolBMedicos& Medicos, ArbolAAEspecialidades& Especialidades) {
+inline void CargarMedicos(ArbolBMedicos& Medicos, ArbolAAEspecialidades& Especialidades) {
     ifstream archivo("Medicos.csv");
     if (!archivo) {
         cout << "No se pudo abrir el archivo Medicos.csv" << endl;

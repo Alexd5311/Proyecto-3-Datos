@@ -478,7 +478,7 @@ public:
 
 ArbolAVLHabitaciones;
 
-void ReporteHabitacionesDisponibles(ArbolAVLHabitaciones& Habitaciones)
+inline void ReporteHabitacionesDisponibles(ArbolAVLHabitaciones& Habitaciones)
 {
     GeneradorPDF pdf("Reporte_Habitaciones_Disponibles.pdf", "REPORTE DE HABITACIONES DISPONIBLES",
         Rellenar("ID", 8) + Rellenar("NUMERO", 8) + Rellenar("PISO", 8)
@@ -497,7 +497,7 @@ void ReporteHabitacionesDisponibles(ArbolAVLHabitaciones& Habitaciones)
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteHabitacionesOcupadas(ArbolAVLHabitaciones& Habitaciones)
+inline void ReporteHabitacionesOcupadas(ArbolAVLHabitaciones& Habitaciones)
 {
     GeneradorPDF pdf("Reporte_Habitaciones_Ocupadas.pdf", "REPORTE DE HABITACIONES OCUPADAS",
         Rellenar("ID", 8) + Rellenar("NUMERO", 8) + Rellenar("PISO", 8)
@@ -516,7 +516,7 @@ void ReporteHabitacionesOcupadas(ArbolAVLHabitaciones& Habitaciones)
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void CargarHabitaciones(ArbolAVLHabitaciones& Habitaciones)
+inline void CargarHabitaciones(ArbolAVLHabitaciones& Habitaciones)
 {
     ifstream archivo("Habitaciones.csv");
     if (!archivo)

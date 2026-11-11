@@ -230,7 +230,7 @@ public:
     }
 };
 
-void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {
+inline void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {
     int CodPais;
     cout << endl;
     cout << "Ingrese el CodPais: ";
@@ -260,7 +260,7 @@ void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {
 }
 
 
-void CargarCiudades(ArbolABBCiudades &Ciudades, ArbolABBPaises &Paises){
+inline void CargarCiudades(ArbolABBCiudades &Ciudades, ArbolABBPaises &Paises){
     ifstream archivo("Ciudades.csv");
     if (!archivo){
         cout << "No se pudo abrir el archivo Ciudades.csv" << endl;

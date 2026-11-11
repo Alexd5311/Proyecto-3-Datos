@@ -558,7 +558,7 @@ public:
 
 
 
-void ReportePacientesPorCiudad(
+inline void ReportePacientesPorCiudad(
     ArbolBPacientes& Pacientes,
     ArbolABBCiudades& Ciudades)
 {
@@ -617,7 +617,7 @@ void ReportePacientesPorCiudad(
 }
 
 
-void ReportePDFPacientesPorPais(ArbolBPacientes& Pacientes,
+inline void ReportePDFPacientesPorPais(ArbolBPacientes& Pacientes,
     ArbolABBPaises& Paises)
 {
     int CodPais;
@@ -663,7 +663,7 @@ void ReportePDFPacientesPorPais(ArbolBPacientes& Pacientes,
 //║                         CARGAR PACIENTES                             ║
 //╚══════════════════════════════════════════════════════════════════════╝
 
-void CargarPacientes(ArbolBPacientes& Pacientes, ArbolABBCiudades& Ciudades)
+inline void CargarPacientes(ArbolBPacientes& Pacientes, ArbolABBCiudades& Ciudades)
 {
     ifstream archivo("Pacientes.csv");
     if (!archivo)

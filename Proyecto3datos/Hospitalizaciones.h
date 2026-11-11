@@ -688,7 +688,7 @@ public:
 
 };
 
-void ReporteHospitalizaciones(ArbolRNHospitalizaciones& Hospitalizaciones)
+inline void ReporteHospitalizaciones(ArbolRNHospitalizaciones& Hospitalizaciones)
 {
     GeneradorPDF pdf(
         "Reporte_Hospitalizaciones.pdf",
@@ -716,7 +716,7 @@ void ReporteHospitalizaciones(ArbolRNHospitalizaciones& Hospitalizaciones)
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteHospitalizacionesPorMedico(ArbolRNHospitalizaciones& Hospitalizaciones)
+inline void ReporteHospitalizacionesPorMedico(ArbolRNHospitalizaciones& Hospitalizaciones)
 {
     int IdMedico;
 
@@ -759,7 +759,7 @@ void ReporteHospitalizacionesPorMedico(ArbolRNHospitalizaciones& Hospitalizacion
 //║                    CARGAR HOSPITALIZACIONES                                ║
 //╚═════════════════════════════════════════════════════════════════════════════╝
 
-void CargarHospitalizaciones(ArbolRNHospitalizaciones &Hospitalizaciones, ArbolBPacientes &Pacientes, 
+inline void CargarHospitalizaciones(ArbolRNHospitalizaciones &Hospitalizaciones, ArbolBPacientes &Pacientes,
     ArbolAVLHabitaciones &Habitaciones, ArbolBMedicos &Medicos)
 {
     ifstream archivo("Hospitalizaciones.csv");

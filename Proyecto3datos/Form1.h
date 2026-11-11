@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "SistemaPrincipal.h"
+#include "FormPaises.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -43,35 +44,35 @@ namespace CppCLRWinFormsProject {
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ mantenimientoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ inserciónToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ paisesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ ciudadesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ medicosToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ pacientesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ habitacionesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ hospitalizacionesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ tratamientosToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ diagnosticosToolStripMenuItem;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::ToolStripMenuItem^ modificaciónToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ paisesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ ciudadesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ medicosToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ pacientesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ habitacionesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ hospitalizacionesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ tratamientosToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ diagnósticosToolStripMenuItem;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::ToolStripMenuItem^ búsquedasToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ paisesToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ ciudadesToolStripMenuItem2;
+
+
 
 	private: System::Windows::Forms::ToolStripMenuItem^ reportesToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ acercaDeToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ medicosToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ pacientesToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ habitacionesToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ hospitalizacionesToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ tratamientosToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ diagnósticosToolStripMenuItem1;
+
+
+
+
+
+
 	private: System::Windows::Forms::ToolStrip^ toolStrip1;
 	private: System::Windows::Forms::ToolStripLabel^ toolStripLabel1;
 	private: System::Windows::Forms::ToolStripLabel^ LblUsuario;
@@ -84,12 +85,12 @@ namespace CppCLRWinFormsProject {
 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ BtnPaises;
-	private: System::Windows::Forms::ToolStripMenuItem^ citasToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ especialidadesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ citasToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ especialidadesToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ citasToolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ especialidadesToolStripMenuItem2;
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^ BtnEspecialidades;
 
 	private: System::Windows::Forms::Button^ BtnCitas;
@@ -103,6 +104,13 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::Button^ BtnMedicos;
 	private: System::Windows::Forms::Button^ BtnCiudades;
 	private: System::Windows::Forms::Timer^ TimerHora;
+	private: System::Windows::Forms::ToolStripMenuItem^ pacientesToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ habitacionesToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ hospitalizacionesToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ tratamientosToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ diagnosticosToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^ citasToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ especialidadesToolStripMenuItem3;
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -124,38 +132,15 @@ namespace CppCLRWinFormsProject {
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->mantenimientoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->inserciónToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->paisesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ciudadesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->medicosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->pacientesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->habitacionesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->hospitalizacionesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->tratamientosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->diagnosticosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->citasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->especialidadesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->modificaciónToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->paisesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ciudadesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->medicosToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->pacientesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->habitacionesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->hospitalizacionesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->tratamientosToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->diagnósticosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->citasToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->especialidadesToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->búsquedasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->paisesToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ciudadesToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->medicosToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->pacientesToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->habitacionesToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->hospitalizacionesToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->tratamientosToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->diagnósticosToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->citasToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->especialidadesToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->pacientesToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->habitacionesToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->hospitalizacionesToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->tratamientosToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->diagnosticosToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->citasToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->especialidadesToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->acercaDeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
@@ -196,9 +181,11 @@ namespace CppCLRWinFormsProject {
 			// 
 			// mantenimientoToolStripMenuItem
 			// 
-			this->mantenimientoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->mantenimientoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(10) {
 				this->inserciónToolStripMenuItem,
-					this->modificaciónToolStripMenuItem, this->búsquedasToolStripMenuItem
+					this->modificaciónToolStripMenuItem, this->búsquedasToolStripMenuItem, this->pacientesToolStripMenuItem3, this->habitacionesToolStripMenuItem3,
+					this->hospitalizacionesToolStripMenuItem3, this->tratamientosToolStripMenuItem3, this->diagnosticosToolStripMenuItem1, this->citasToolStripMenuItem3,
+					this->especialidadesToolStripMenuItem3
 			});
 			this->mantenimientoToolStripMenuItem->Name = L"mantenimientoToolStripMenuItem";
 			this->mantenimientoToolStripMenuItem->Size = System::Drawing::Size(101, 20);
@@ -206,219 +193,65 @@ namespace CppCLRWinFormsProject {
 			// 
 			// inserciónToolStripMenuItem
 			// 
-			this->inserciónToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(10) {
-				this->paisesToolStripMenuItem,
-					this->ciudadesToolStripMenuItem, this->medicosToolStripMenuItem, this->pacientesToolStripMenuItem, this->habitacionesToolStripMenuItem,
-					this->hospitalizacionesToolStripMenuItem, this->tratamientosToolStripMenuItem, this->diagnosticosToolStripMenuItem, this->citasToolStripMenuItem,
-					this->especialidadesToolStripMenuItem
-			});
 			this->inserciónToolStripMenuItem->Name = L"inserciónToolStripMenuItem";
-			this->inserciónToolStripMenuItem->Size = System::Drawing::Size(144, 22);
-			this->inserciónToolStripMenuItem->Text = L"Inserción";
-			// 
-			// paisesToolStripMenuItem
-			// 
-			this->paisesToolStripMenuItem->Name = L"paisesToolStripMenuItem";
-			this->paisesToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->paisesToolStripMenuItem->Text = L"Paises";
-			// 
-			// ciudadesToolStripMenuItem
-			// 
-			this->ciudadesToolStripMenuItem->Name = L"ciudadesToolStripMenuItem";
-			this->ciudadesToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->ciudadesToolStripMenuItem->Text = L"Ciudades";
-			// 
-			// medicosToolStripMenuItem
-			// 
-			this->medicosToolStripMenuItem->Name = L"medicosToolStripMenuItem";
-			this->medicosToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->medicosToolStripMenuItem->Text = L"Medicos";
-			// 
-			// pacientesToolStripMenuItem
-			// 
-			this->pacientesToolStripMenuItem->Name = L"pacientesToolStripMenuItem";
-			this->pacientesToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->pacientesToolStripMenuItem->Text = L"Pacientes";
-			// 
-			// habitacionesToolStripMenuItem
-			// 
-			this->habitacionesToolStripMenuItem->Name = L"habitacionesToolStripMenuItem";
-			this->habitacionesToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->habitacionesToolStripMenuItem->Text = L"Habitaciones";
-			// 
-			// hospitalizacionesToolStripMenuItem
-			// 
-			this->hospitalizacionesToolStripMenuItem->Name = L"hospitalizacionesToolStripMenuItem";
-			this->hospitalizacionesToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->hospitalizacionesToolStripMenuItem->Text = L"Hospitalizaciones";
-			// 
-			// tratamientosToolStripMenuItem
-			// 
-			this->tratamientosToolStripMenuItem->Name = L"tratamientosToolStripMenuItem";
-			this->tratamientosToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->tratamientosToolStripMenuItem->Text = L"Tratamientos";
-			// 
-			// diagnosticosToolStripMenuItem
-			// 
-			this->diagnosticosToolStripMenuItem->Name = L"diagnosticosToolStripMenuItem";
-			this->diagnosticosToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->diagnosticosToolStripMenuItem->Text = L"Diagnosticos";
-			// 
-			// citasToolStripMenuItem
-			// 
-			this->citasToolStripMenuItem->Name = L"citasToolStripMenuItem";
-			this->citasToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->citasToolStripMenuItem->Text = L"Citas";
-			// 
-			// especialidadesToolStripMenuItem
-			// 
-			this->especialidadesToolStripMenuItem->Name = L"especialidadesToolStripMenuItem";
-			this->especialidadesToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->especialidadesToolStripMenuItem->Text = L"Especialidades";
+			this->inserciónToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->inserciónToolStripMenuItem->Text = L"Paises";
+			this->inserciónToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::inserciónToolStripMenuItem_Click);
 			// 
 			// modificaciónToolStripMenuItem
 			// 
-			this->modificaciónToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(10) {
-				this->paisesToolStripMenuItem1,
-					this->ciudadesToolStripMenuItem1, this->medicosToolStripMenuItem1, this->pacientesToolStripMenuItem1, this->habitacionesToolStripMenuItem1,
-					this->hospitalizacionesToolStripMenuItem1, this->tratamientosToolStripMenuItem1, this->diagnósticosToolStripMenuItem, this->citasToolStripMenuItem1,
-					this->especialidadesToolStripMenuItem1
-			});
 			this->modificaciónToolStripMenuItem->Name = L"modificaciónToolStripMenuItem";
-			this->modificaciónToolStripMenuItem->Size = System::Drawing::Size(144, 22);
-			this->modificaciónToolStripMenuItem->Text = L"Modificación";
-			// 
-			// paisesToolStripMenuItem1
-			// 
-			this->paisesToolStripMenuItem1->Name = L"paisesToolStripMenuItem1";
-			this->paisesToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->paisesToolStripMenuItem1->Text = L"Paises";
-			// 
-			// ciudadesToolStripMenuItem1
-			// 
-			this->ciudadesToolStripMenuItem1->Name = L"ciudadesToolStripMenuItem1";
-			this->ciudadesToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->ciudadesToolStripMenuItem1->Text = L"Ciudades";
-			// 
-			// medicosToolStripMenuItem1
-			// 
-			this->medicosToolStripMenuItem1->Name = L"medicosToolStripMenuItem1";
-			this->medicosToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->medicosToolStripMenuItem1->Text = L"Medicos";
-			// 
-			// pacientesToolStripMenuItem1
-			// 
-			this->pacientesToolStripMenuItem1->Name = L"pacientesToolStripMenuItem1";
-			this->pacientesToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->pacientesToolStripMenuItem1->Text = L"Pacientes";
-			// 
-			// habitacionesToolStripMenuItem1
-			// 
-			this->habitacionesToolStripMenuItem1->Name = L"habitacionesToolStripMenuItem1";
-			this->habitacionesToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->habitacionesToolStripMenuItem1->Text = L"Habitaciones";
-			// 
-			// hospitalizacionesToolStripMenuItem1
-			// 
-			this->hospitalizacionesToolStripMenuItem1->Name = L"hospitalizacionesToolStripMenuItem1";
-			this->hospitalizacionesToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->hospitalizacionesToolStripMenuItem1->Text = L"Hospitalizaciones";
-			// 
-			// tratamientosToolStripMenuItem1
-			// 
-			this->tratamientosToolStripMenuItem1->Name = L"tratamientosToolStripMenuItem1";
-			this->tratamientosToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->tratamientosToolStripMenuItem1->Text = L"Tratamientos";
-			// 
-			// diagnósticosToolStripMenuItem
-			// 
-			this->diagnósticosToolStripMenuItem->Name = L"diagnósticosToolStripMenuItem";
-			this->diagnósticosToolStripMenuItem->Size = System::Drawing::Size(166, 22);
-			this->diagnósticosToolStripMenuItem->Text = L"Diagnósticos";
-			// 
-			// citasToolStripMenuItem1
-			// 
-			this->citasToolStripMenuItem1->Name = L"citasToolStripMenuItem1";
-			this->citasToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->citasToolStripMenuItem1->Text = L"Citas";
-			// 
-			// especialidadesToolStripMenuItem1
-			// 
-			this->especialidadesToolStripMenuItem1->Name = L"especialidadesToolStripMenuItem1";
-			this->especialidadesToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->especialidadesToolStripMenuItem1->Text = L"Especialidades";
+			this->modificaciónToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->modificaciónToolStripMenuItem->Text = L"Ciudades";
 			// 
 			// búsquedasToolStripMenuItem
 			// 
-			this->búsquedasToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(10) {
-				this->paisesToolStripMenuItem2,
-					this->ciudadesToolStripMenuItem2, this->medicosToolStripMenuItem2, this->pacientesToolStripMenuItem2, this->habitacionesToolStripMenuItem2,
-					this->hospitalizacionesToolStripMenuItem2, this->tratamientosToolStripMenuItem2, this->diagnósticosToolStripMenuItem1, this->citasToolStripMenuItem2,
-					this->especialidadesToolStripMenuItem2
-			});
 			this->búsquedasToolStripMenuItem->Name = L"búsquedasToolStripMenuItem";
-			this->búsquedasToolStripMenuItem->Size = System::Drawing::Size(144, 22);
-			this->búsquedasToolStripMenuItem->Text = L"Búsquedas";
+			this->búsquedasToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->búsquedasToolStripMenuItem->Text = L"Medicos";
+			this->búsquedasToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::búsquedasToolStripMenuItem_Click);
 			// 
-			// paisesToolStripMenuItem2
+			// pacientesToolStripMenuItem3
 			// 
-			this->paisesToolStripMenuItem2->Name = L"paisesToolStripMenuItem2";
-			this->paisesToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->paisesToolStripMenuItem2->Text = L"Paises";
+			this->pacientesToolStripMenuItem3->Name = L"pacientesToolStripMenuItem3";
+			this->pacientesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->pacientesToolStripMenuItem3->Text = L"Pacientes";
 			// 
-			// ciudadesToolStripMenuItem2
+			// habitacionesToolStripMenuItem3
 			// 
-			this->ciudadesToolStripMenuItem2->Name = L"ciudadesToolStripMenuItem2";
-			this->ciudadesToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->ciudadesToolStripMenuItem2->Text = L"Ciudades";
+			this->habitacionesToolStripMenuItem3->Name = L"habitacionesToolStripMenuItem3";
+			this->habitacionesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->habitacionesToolStripMenuItem3->Text = L"Habitaciones";
 			// 
-			// medicosToolStripMenuItem2
+			// hospitalizacionesToolStripMenuItem3
 			// 
-			this->medicosToolStripMenuItem2->Name = L"medicosToolStripMenuItem2";
-			this->medicosToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->medicosToolStripMenuItem2->Text = L"Medicos";
+			this->hospitalizacionesToolStripMenuItem3->Name = L"hospitalizacionesToolStripMenuItem3";
+			this->hospitalizacionesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->hospitalizacionesToolStripMenuItem3->Text = L"Hospitalizaciones";
 			// 
-			// pacientesToolStripMenuItem2
+			// tratamientosToolStripMenuItem3
 			// 
-			this->pacientesToolStripMenuItem2->Name = L"pacientesToolStripMenuItem2";
-			this->pacientesToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->pacientesToolStripMenuItem2->Text = L"Pacientes";
+			this->tratamientosToolStripMenuItem3->Name = L"tratamientosToolStripMenuItem3";
+			this->tratamientosToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->tratamientosToolStripMenuItem3->Text = L"Tratamientos";
 			// 
-			// habitacionesToolStripMenuItem2
+			// diagnosticosToolStripMenuItem1
 			// 
-			this->habitacionesToolStripMenuItem2->Name = L"habitacionesToolStripMenuItem2";
-			this->habitacionesToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->habitacionesToolStripMenuItem2->Text = L"Habitaciones";
+			this->diagnosticosToolStripMenuItem1->Name = L"diagnosticosToolStripMenuItem1";
+			this->diagnosticosToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->diagnosticosToolStripMenuItem1->Text = L"Diagnosticos";
 			// 
-			// hospitalizacionesToolStripMenuItem2
+			// citasToolStripMenuItem3
 			// 
-			this->hospitalizacionesToolStripMenuItem2->Name = L"hospitalizacionesToolStripMenuItem2";
-			this->hospitalizacionesToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->hospitalizacionesToolStripMenuItem2->Text = L"Hospitalizaciones";
+			this->citasToolStripMenuItem3->Name = L"citasToolStripMenuItem3";
+			this->citasToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->citasToolStripMenuItem3->Text = L"Citas";
 			// 
-			// tratamientosToolStripMenuItem2
+			// especialidadesToolStripMenuItem3
 			// 
-			this->tratamientosToolStripMenuItem2->Name = L"tratamientosToolStripMenuItem2";
-			this->tratamientosToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->tratamientosToolStripMenuItem2->Text = L"Tratamientos";
-			// 
-			// diagnósticosToolStripMenuItem1
-			// 
-			this->diagnósticosToolStripMenuItem1->Name = L"diagnósticosToolStripMenuItem1";
-			this->diagnósticosToolStripMenuItem1->Size = System::Drawing::Size(166, 22);
-			this->diagnósticosToolStripMenuItem1->Text = L"Diagnósticos";
-			// 
-			// citasToolStripMenuItem2
-			// 
-			this->citasToolStripMenuItem2->Name = L"citasToolStripMenuItem2";
-			this->citasToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->citasToolStripMenuItem2->Text = L"Citas";
-			// 
-			// especialidadesToolStripMenuItem2
-			// 
-			this->especialidadesToolStripMenuItem2->Name = L"especialidadesToolStripMenuItem2";
-			this->especialidadesToolStripMenuItem2->Size = System::Drawing::Size(166, 22);
-			this->especialidadesToolStripMenuItem2->Text = L"Especialidades";
+			this->especialidadesToolStripMenuItem3->Name = L"especialidadesToolStripMenuItem3";
+			this->especialidadesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->especialidadesToolStripMenuItem3->Text = L"Especialidades";
 			// 
 			// reportesToolStripMenuItem
 			// 
@@ -497,6 +330,7 @@ namespace CppCLRWinFormsProject {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(901, 446);
 			this->panel1->TabIndex = 2;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Form1::panel1_Paint);
 			// 
 			// BtnEspecialidades
 			// 
@@ -627,6 +461,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnPaises->Text = L"Paises";
 			this->BtnPaises->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnPaises->UseVisualStyleBackColor = true;
+			this->BtnPaises->Click += gcnew System::EventHandler(this, &Form1::BtnPaises_Click);
 			// 
 			// TimerHora
 			// 
@@ -666,6 +501,21 @@ private: System::Void TimerHora_Tick(System::Object^ sender, System::EventArgs^ 
 	
 }
 private: System::Void LblHora_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void paisesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void inserciónToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormPaises^ paises = gcnew FormPaises(sistema);
+	paises->ShowDialog();
+}
+private: System::Void búsquedasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void BtnPaises_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormPaises^ paises = gcnew FormPaises(sistema);
+	paises->ShowDialog();
 }
 };
 }

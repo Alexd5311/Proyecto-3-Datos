@@ -571,7 +571,7 @@ private:
     }
 };
 
-void ReporteCitasPorFecha(ArbolAVLCitas& Citas)
+inline void ReporteCitasPorFecha(ArbolAVLCitas& Citas)
 {
     string fecha;
     cout << "Ingrese la fecha (YYYY-MM-DD): ";
@@ -588,7 +588,7 @@ void ReporteCitasPorFecha(ArbolAVLCitas& Citas)
     else cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteCitasPorEspecialidad(ArbolAVLCitas& Citas)
+inline void ReporteCitasPorEspecialidad(ArbolAVLCitas& Citas)
 {
     int IdEspecialidad;
     cout << "Ingrese el IdEspecialidad: ";
@@ -606,7 +606,7 @@ void ReporteCitasPorEspecialidad(ArbolAVLCitas& Citas)
     else cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteCitasPorMedico(ArbolAVLCitas& Citas)
+inline void ReporteCitasPorMedico(ArbolAVLCitas& Citas)
 {
     int IdMedico;
     cout << "Ingrese el IdMedico: ";
@@ -624,7 +624,7 @@ void ReporteCitasPorMedico(ArbolAVLCitas& Citas)
     else cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteCitasPorPaciente(ArbolAVLCitas& Citas)
+inline void ReporteCitasPorPaciente(ArbolAVLCitas& Citas)
 {
     int IdPaciente;
 
@@ -668,7 +668,7 @@ void ReporteCitasPorPaciente(ArbolAVLCitas& Citas)
     }
 }
 
-void CargarCitas(ArbolAVLCitas& Citas, ArbolBPacientes& Pacientes,
+inline void CargarCitas(ArbolAVLCitas& Citas, ArbolBPacientes& Pacientes,
     ArbolBMedicos& Medicos, ArbolAAEspecialidades& Especialidades)
 {
     ifstream archivo("Citas.csv");
