@@ -317,6 +317,11 @@ public:
         return true;
     }
 
+    RegistroMedico* ObtenerMedico(int IdMedico)
+    {
+        return BuscarRegistro(Raiz, IdMedico);
+    }
+
     bool Eliminar(int IdMedico) {
         if (!EliminarRecursivo(Raiz, IdMedico))
             return false;
@@ -388,6 +393,12 @@ public:
             }
         }
         return cantidad;
+    }
+    vector<RegistroMedico> ObtenerTodos()
+    {
+        vector<RegistroMedico> registros;
+        Recopilar(Raiz, registros);
+        return registros;
     }
 };
 

@@ -2,6 +2,10 @@
 #include "SistemaPrincipal.h"
 #include "FormPaises.h"
 #include "FormCiudades.h"
+#include "FormMedicos.h"
+#include "FormPacientes.h"
+//#include "FormEspecialidades.h"
+
 
 namespace CppCLRWinFormsProject {
 
@@ -218,6 +222,7 @@ namespace CppCLRWinFormsProject {
 			this->pacientesToolStripMenuItem3->Name = L"pacientesToolStripMenuItem3";
 			this->pacientesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
 			this->pacientesToolStripMenuItem3->Text = L"Pacientes";
+			this->pacientesToolStripMenuItem3->Click += gcnew System::EventHandler(this, &Form1::pacientesToolStripMenuItem3_Click);
 			// 
 			// habitacionesToolStripMenuItem3
 			// 
@@ -424,6 +429,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnPacientes->Text = L"Pacientes";
 			this->BtnPacientes->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnPacientes->UseVisualStyleBackColor = true;
+			this->BtnPacientes->Click += gcnew System::EventHandler(this, &Form1::BtnPacientes_Click);
 			// 
 			// BtnMedicos
 			// 
@@ -437,6 +443,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnMedicos->Text = L"Medicos";
 			this->BtnMedicos->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnMedicos->UseVisualStyleBackColor = true;
+			this->BtnMedicos->Click += gcnew System::EventHandler(this, &Form1::BtnMedicos_Click);
 			// 
 			// BtnCiudades
 			// 
@@ -515,6 +522,8 @@ private: System::Void inserciónToolStripMenuItem_Click(System::Object^ sender, 
 	paises->ShowDialog();
 }
 private: System::Void búsquedasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormMedicos^ medicos = gcnew FormMedicos(sistema);
+	medicos->ShowDialog();
 }
 private: System::Void BtnPaises_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormPaises^ paises = gcnew FormPaises(sistema);
@@ -527,6 +536,18 @@ private: System::Void BtnCiudades_Click(System::Object^ sender, System::EventArg
 private: System::Void modificaciónToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormCiudades^ ciudades = gcnew FormCiudades(sistema);
 	ciudades->ShowDialog();
+}
+private: System::Void BtnMedicos_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormMedicos^ medicos = gcnew FormMedicos(sistema);
+	medicos->ShowDialog();
+}
+private: System::Void BtnPacientes_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormPacientes^ pacientes = gcnew FormPacientes(sistema);
+	pacientes->ShowDialog();
+}
+private: System::Void pacientesToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormPacientes^ pacientes = gcnew FormPacientes(sistema);
+	pacientes->ShowDialog();
 }
 };
 }

@@ -294,6 +294,11 @@ public:
 
         ReportePDFRec(raiz, pdf);
     }
+
+    NodoEspecialidad* ObtenerEspecialidad(int id)
+    {
+        return BuscarRec(raiz, id);
+	}
 };
 
 inline void CargarEspecialidades(ArbolAAEspecialidades& Especialidades)

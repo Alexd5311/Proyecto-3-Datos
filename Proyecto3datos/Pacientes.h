@@ -424,6 +424,18 @@ public:
         return true;
     }
 
+    RegistroPaciente* ObtenerPaciente(int IdPaciente)
+    {
+        return BuscarRegistro(Raiz, IdPaciente);
+    }
+
+    vector<RegistroPaciente> ObtenerTodos()
+    {
+        vector<RegistroPaciente> registros;
+        Recopilar(Raiz, registros);
+        return registros;
+    }
+
     
     bool Eliminar(int IdPaciente)
     {

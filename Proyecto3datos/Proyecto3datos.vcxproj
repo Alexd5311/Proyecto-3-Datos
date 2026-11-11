@@ -141,6 +141,12 @@
     <ClInclude Include="FormCiudades.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormMedicos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormPacientes.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormPaises.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -160,6 +166,8 @@
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="FormCiudades.cpp" />
+    <ClCompile Include="FormMedicos.cpp" />
+    <ClCompile Include="FormPacientes.cpp" />
     <ClCompile Include="FormPaises.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -204,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCiudades.resx">
       <DependentUpon>FormCiudades.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMedicos.resx">
+      <DependentUpon>FormMedicos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPacientes.resx">
+      <DependentUpon>FormPacientes.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaises.resx">
       <DependentUpon>FormPaises.h</DependentUpon>
