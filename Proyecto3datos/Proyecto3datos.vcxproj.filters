@@ -80,6 +80,12 @@
     <ClInclude Include="FormPacientes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FormEspecialidades.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormCitas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -104,6 +110,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FormPacientes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormEspecialidades.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormCitas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

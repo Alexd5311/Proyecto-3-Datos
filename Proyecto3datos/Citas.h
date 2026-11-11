@@ -396,6 +396,19 @@ private:
         ReportePDFPorPacienteRecursivo(pdf, n->Hder, IdPaciente, cantidad);
     }
 
+    void ObtenerCitas(pNodoCita nodo, NodoCita** lista, int& cantidad)
+    {
+        if (nodo != nullptr)
+        {
+            ObtenerCitas(nodo->Hizq, lista, cantidad);
+
+            lista[cantidad] = nodo;
+            cantidad++;
+
+            ObtenerCitas(nodo->Hder, lista, cantidad);
+        }
+    }
+
 public:
     ArbolAVLCitas() : raiz(nullptr) {}
 
@@ -450,6 +463,27 @@ public:
             actual = (IdCita < actual->IdCita) ? actual->Hizq : actual->Hder;
         }
         return false;
+    }
+
+    NodoCita* ObtenerCita(int IdCita)
+    {
+        pNodoCita actual = raiz;
+        while (actual != nullptr)
+        {
+            if (IdCita == actual->IdCita)
+                return actual;
+            if (IdCita < actual->IdCita)
+                actual = actual->Hizq;
+            else
+                actual = actual->Hder;
+        }
+        return nullptr;
+    }
+
+    void ObtenerTodos(NodoCita** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerCitas(raiz, lista, cantidad);
     }
 
     bool Eliminar(int IdCita)

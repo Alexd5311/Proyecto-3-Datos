@@ -208,6 +208,22 @@ private:
         return nodo;
     }
 
+    void ObtenerEspecialidades(
+        NodoEspecialidad* nodo,
+        NodoEspecialidad** lista,
+        int& cantidad)
+    {
+        if (nodo != nullptr)
+        {
+            ObtenerEspecialidades(nodo->izq, lista, cantidad);
+
+            lista[cantidad] = nodo;
+            cantidad++;
+
+            ObtenerEspecialidades(nodo->der, lista, cantidad);
+        }
+    }
+
 public:
     ArbolAAEspecialidades()
     {
@@ -252,6 +268,17 @@ public:
         return true;
     }
 
+    NodoEspecialidad* ObtenerEspecialidad(int id)
+    {
+        return BuscarRec(raiz, id);
+    }
+
+    void ObtenerTodos(NodoEspecialidad** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerEspecialidades(raiz, lista, cantidad);
+    }
+
     bool Modificar(int id, string nombre, string descripcion)
     {
         NodoEspecialidad* aux = BuscarRec(raiz, id);
@@ -294,11 +321,6 @@ public:
 
         ReportePDFRec(raiz, pdf);
     }
-
-    NodoEspecialidad* ObtenerEspecialidad(int id)
-    {
-        return BuscarRec(raiz, id);
-	}
 };
 
 inline void CargarEspecialidades(ArbolAAEspecialidades& Especialidades)

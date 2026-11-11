@@ -4,7 +4,8 @@
 #include "FormCiudades.h"
 #include "FormMedicos.h"
 #include "FormPacientes.h"
-//#include "FormEspecialidades.h"
+#include "FormEspecialidades.h"
+#include "FormCitas.h"
 
 
 namespace CppCLRWinFormsProject {
@@ -253,12 +254,14 @@ namespace CppCLRWinFormsProject {
 			this->citasToolStripMenuItem3->Name = L"citasToolStripMenuItem3";
 			this->citasToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
 			this->citasToolStripMenuItem3->Text = L"Citas";
+			this->citasToolStripMenuItem3->Click += gcnew System::EventHandler(this, &Form1::citasToolStripMenuItem3_Click);
 			// 
 			// especialidadesToolStripMenuItem3
 			// 
 			this->especialidadesToolStripMenuItem3->Name = L"especialidadesToolStripMenuItem3";
 			this->especialidadesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
 			this->especialidadesToolStripMenuItem3->Text = L"Especialidades";
+			this->especialidadesToolStripMenuItem3->Click += gcnew System::EventHandler(this, &Form1::especialidadesToolStripMenuItem3_Click);
 			// 
 			// reportesToolStripMenuItem
 			// 
@@ -351,6 +354,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnEspecialidades->Text = L"Especialidades";
 			this->BtnEspecialidades->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnEspecialidades->UseVisualStyleBackColor = true;
+			this->BtnEspecialidades->Click += gcnew System::EventHandler(this, &Form1::BtnEspecialidades_Click);
 			// 
 			// BtnCitas
 			// 
@@ -364,6 +368,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnCitas->Text = L"Citas";
 			this->BtnCitas->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnCitas->UseVisualStyleBackColor = true;
+			this->BtnCitas->Click += gcnew System::EventHandler(this, &Form1::BtnCitas_Click);
 			// 
 			// BtnDiagnosticos
 			// 
@@ -548,6 +553,22 @@ private: System::Void BtnPacientes_Click(System::Object^ sender, System::EventAr
 private: System::Void pacientesToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormPacientes^ pacientes = gcnew FormPacientes(sistema);
 	pacientes->ShowDialog();
+}
+private: System::Void especialidadesToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormEspecialidades^ especialidades = gcnew FormEspecialidades(sistema);
+	especialidades->ShowDialog();
+}
+private: System::Void BtnEspecialidades_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormEspecialidades^ especialidades = gcnew FormEspecialidades(sistema);
+	especialidades->ShowDialog();
+}
+private: System::Void BtnCitas_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormCitas^ citas = gcnew FormCitas(sistema);
+	citas->ShowDialog();
+}
+private: System::Void citasToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormCitas^ citas = gcnew FormCitas(sistema);
+	citas->ShowDialog();
 }
 };
 }
