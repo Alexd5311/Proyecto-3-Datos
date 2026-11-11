@@ -155,6 +155,17 @@ private:
         }
     }
 
+    void ObtenerCiudades(pnodoCiudad actual, NodoCiudad** lista, int& cantidad)
+    {
+        if (actual != NULL)
+        {
+            ObtenerCiudades(actual->izquierdo, lista, cantidad);
+            lista[cantidad] = actual;
+            cantidad++;
+            ObtenerCiudades(actual->derecho, lista, cantidad);
+        }
+    }
+
 public:
     ArbolABBCiudades() {
         raiz = NULL;
@@ -228,6 +239,17 @@ public:
     int ReportePDF(GeneradorPDF& pdf, int CodPais) {
         return ReporteInorden(raiz, pdf, CodPais);
     }
+
+    NodoCiudad* ObtenerCiudad(int CodPais, int CodCiudad)
+    {
+        return BuscarNodo(raiz, CodPais, CodCiudad);
+    }
+    void ObtenerTodos(NodoCiudad** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerCiudades(raiz, lista, cantidad);
+    }
+
 };
 
 inline void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {

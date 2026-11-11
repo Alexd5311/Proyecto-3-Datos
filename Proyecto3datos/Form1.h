@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "SistemaPrincipal.h"
 #include "FormPaises.h"
+#include "FormCiudades.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -203,6 +204,7 @@ namespace CppCLRWinFormsProject {
 			this->modificaciónToolStripMenuItem->Name = L"modificaciónToolStripMenuItem";
 			this->modificaciónToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->modificaciónToolStripMenuItem->Text = L"Ciudades";
+			this->modificaciónToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::modificaciónToolStripMenuItem_Click);
 			// 
 			// búsquedasToolStripMenuItem
 			// 
@@ -448,6 +450,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnCiudades->Text = L"Ciudades";
 			this->BtnCiudades->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnCiudades->UseVisualStyleBackColor = true;
+			this->BtnCiudades->Click += gcnew System::EventHandler(this, &Form1::BtnCiudades_Click);
 			// 
 			// BtnPaises
 			// 
@@ -516,6 +519,14 @@ private: System::Void búsquedasToolStripMenuItem_Click(System::Object^ sender, 
 private: System::Void BtnPaises_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormPaises^ paises = gcnew FormPaises(sistema);
 	paises->ShowDialog();
+}
+private: System::Void BtnCiudades_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormCiudades^ ciudades = gcnew FormCiudades(sistema);
+	ciudades->ShowDialog();
+}
+private: System::Void modificaciónToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormCiudades^ ciudades = gcnew FormCiudades(sistema);
+	ciudades->ShowDialog();
 }
 };
 }
