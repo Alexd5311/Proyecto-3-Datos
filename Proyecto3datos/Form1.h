@@ -6,7 +6,8 @@
 #include "FormPacientes.h"
 #include "FormEspecialidades.h"
 #include "FormCitas.h"
-
+#include "FormHospitalizaciones.h"
+#include "FormHabitaciones.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -230,12 +231,14 @@ namespace CppCLRWinFormsProject {
 			this->habitacionesToolStripMenuItem3->Name = L"habitacionesToolStripMenuItem3";
 			this->habitacionesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
 			this->habitacionesToolStripMenuItem3->Text = L"Habitaciones";
+			this->habitacionesToolStripMenuItem3->Click += gcnew System::EventHandler(this, &Form1::habitacionesToolStripMenuItem3_Click);
 			// 
 			// hospitalizacionesToolStripMenuItem3
 			// 
 			this->hospitalizacionesToolStripMenuItem3->Name = L"hospitalizacionesToolStripMenuItem3";
 			this->hospitalizacionesToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
 			this->hospitalizacionesToolStripMenuItem3->Text = L"Hospitalizaciones";
+			this->hospitalizacionesToolStripMenuItem3->Click += gcnew System::EventHandler(this, &Form1::hospitalizacionesToolStripMenuItem3_Click);
 			// 
 			// tratamientosToolStripMenuItem3
 			// 
@@ -408,6 +411,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnHospitalizaciones->Text = L"Hospitalizaciones";
 			this->BtnHospitalizaciones->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnHospitalizaciones->UseVisualStyleBackColor = true;
+			this->BtnHospitalizaciones->Click += gcnew System::EventHandler(this, &Form1::BtnHospitalizaciones_Click);
 			// 
 			// BtnHabitaciones
 			// 
@@ -421,6 +425,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnHabitaciones->Text = L"Habitaciones";
 			this->BtnHabitaciones->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnHabitaciones->UseVisualStyleBackColor = true;
+			this->BtnHabitaciones->Click += gcnew System::EventHandler(this, &Form1::BtnHabitaciones_Click);
 			// 
 			// BtnPacientes
 			// 
@@ -569,6 +574,22 @@ private: System::Void BtnCitas_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void citasToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormCitas^ citas = gcnew FormCitas(sistema);
 	citas->ShowDialog();
+}
+private: System::Void BtnHospitalizaciones_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormHospitalizaciones^ hospitalizaciones = gcnew FormHospitalizaciones(sistema);
+	hospitalizaciones->ShowDialog();
+}
+private: System::Void hospitalizacionesToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormHospitalizaciones^ hospitalizaciones = gcnew FormHospitalizaciones(sistema);
+	hospitalizaciones->ShowDialog();
+}
+private: System::Void BtnHabitaciones_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormHabitaciones^ habitaciones = gcnew FormHabitaciones(sistema);
+	habitaciones->ShowDialog();
+}
+private: System::Void habitacionesToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormHabitaciones^ habitaciones = gcnew FormHabitaciones(sistema);
+	habitaciones->ShowDialog();
 }
 };
 }

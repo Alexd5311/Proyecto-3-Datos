@@ -499,7 +499,20 @@ private:
 
         ReportePDFPorMedicoRecursivo(pdf, nodo->Hijoder, IdMedico, cantidad);
     }
+    void ObtenerHospitalizaciones(
+        NodoHospitalizacion* nodo,
+        NodoHospitalizacion** lista,
+        int& cantidad)
+    {
+        if (nodo != NULL)
+        {
+            ObtenerHospitalizaciones(nodo->Hijoizq, lista, cantidad);
 
+            lista[cantidad] = nodo;
+            cantidad++;
+            ObtenerHospitalizaciones(nodo->Hijoder, lista, cantidad);
+        }
+    }
 
 public:
     
@@ -527,6 +540,12 @@ public:
         }
 		return NULL;
 	}
+
+    void ObtenerTodos(NodoHospitalizacion** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerHospitalizaciones(primero, lista, cantidad);
+    }
 
     bool InsertarHospitalizacion(int IdHospitalizacion,int IdPaciente, int IdHabitacion, int IdMedico,string FechaIngreso, string FechaSalida, string Motivo)
     {

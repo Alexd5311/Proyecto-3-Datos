@@ -375,6 +375,22 @@ private:
         return cantidad;
     }
 
+    void ObtenerHabitaciones(
+        pNodoHabitacion nodo,
+        NodoHabitacion** lista,
+        int& cantidad)
+    {
+        if (nodo != nullptr)
+        {
+            ObtenerHabitaciones(nodo->Hizq, lista, cantidad);
+
+            lista[cantidad] = nodo;
+            cantidad++;
+
+            ObtenerHabitaciones(nodo->Hder, lista, cantidad);
+        }
+    }
+
 public:
     ArbolAVLHabitaciones() : raiz(nullptr) {}
 
@@ -429,6 +445,30 @@ public:
             actual = (IdHabitacion < actual->IdHabitacion) ? actual->Hizq : actual->Hder;
         }
         return false;
+    }
+
+    NodoHabitacion* ObtenerHabitacion(int IdHabitacion)
+    {
+        pNodoHabitacion actual = raiz;
+
+        while (actual != nullptr)
+        {
+            if (IdHabitacion == actual->IdHabitacion)
+                return actual;
+
+            if (IdHabitacion < actual->IdHabitacion)
+                actual = actual->Hizq;
+            else
+                actual = actual->Hder;
+        }
+
+        return nullptr;
+    }
+
+    void ObtenerTodos(NodoHabitacion** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerHabitaciones(raiz, lista, cantidad);
     }
 
     bool Eliminar(int IdHabitacion)

@@ -147,6 +147,12 @@
     <ClInclude Include="FormEspecialidades.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormHabitaciones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormHospitalizaciones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormMedicos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -174,6 +180,8 @@
     <ClCompile Include="FormCitas.cpp" />
     <ClCompile Include="FormCiudades.cpp" />
     <ClCompile Include="FormEspecialidades.cpp" />
+    <ClCompile Include="FormHabitaciones.cpp" />
+    <ClCompile Include="FormHospitalizaciones.cpp" />
     <ClCompile Include="FormMedicos.cpp" />
     <ClCompile Include="FormPacientes.cpp" />
     <ClCompile Include="FormPaises.cpp" />
@@ -226,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEspecialidades.resx">
       <DependentUpon>FormEspecialidades.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHabitaciones.resx">
+      <DependentUpon>FormHabitaciones.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHospitalizaciones.resx">
+      <DependentUpon>FormHospitalizaciones.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMedicos.resx">
       <DependentUpon>FormMedicos.h</DependentUpon>
