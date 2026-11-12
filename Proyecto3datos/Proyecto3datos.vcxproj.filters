@@ -92,6 +92,12 @@
     <ClInclude Include="FormHabitaciones.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FormTratamiento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormDiagnosticos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -128,6 +134,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FormHabitaciones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormTratamiento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormDiagnosticos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

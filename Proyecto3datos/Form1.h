@@ -8,6 +8,8 @@
 #include "FormCitas.h"
 #include "FormHospitalizaciones.h"
 #include "FormHabitaciones.h"
+#include "FormTratamiento.h"
+#include "FormDiagnosticos.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -245,12 +247,14 @@ namespace CppCLRWinFormsProject {
 			this->tratamientosToolStripMenuItem3->Name = L"tratamientosToolStripMenuItem3";
 			this->tratamientosToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
 			this->tratamientosToolStripMenuItem3->Text = L"Tratamientos";
+			this->tratamientosToolStripMenuItem3->Click += gcnew System::EventHandler(this, &Form1::tratamientosToolStripMenuItem3_Click);
 			// 
 			// diagnosticosToolStripMenuItem1
 			// 
 			this->diagnosticosToolStripMenuItem1->Name = L"diagnosticosToolStripMenuItem1";
 			this->diagnosticosToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->diagnosticosToolStripMenuItem1->Text = L"Diagnosticos";
+			this->diagnosticosToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form1::diagnosticosToolStripMenuItem1_Click);
 			// 
 			// citasToolStripMenuItem3
 			// 
@@ -385,6 +389,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnDiagnosticos->Text = L"Diagnosticos";
 			this->BtnDiagnosticos->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnDiagnosticos->UseVisualStyleBackColor = true;
+			this->BtnDiagnosticos->Click += gcnew System::EventHandler(this, &Form1::BtnDiagnosticos_Click);
 			// 
 			// BtnTratamientos
 			// 
@@ -398,6 +403,7 @@ namespace CppCLRWinFormsProject {
 			this->BtnTratamientos->Text = L"Tratamientos";
 			this->BtnTratamientos->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->BtnTratamientos->UseVisualStyleBackColor = true;
+			this->BtnTratamientos->Click += gcnew System::EventHandler(this, &Form1::BtnTratamientos_Click);
 			// 
 			// BtnHospitalizaciones
 			// 
@@ -517,7 +523,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Void toolStripLabel2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void TimerHora_Tick(System::Object^ sender, System::EventArgs^ e) {
-	LblHora->Text = System::DateTime::Now.ToString("HH:mm:ss");
+	LblHora->Text = "Fecha: " + System::DateTime::Now.ToString("dd/MM/yyyy") + " | Hora: " + System::DateTime::Now.ToString("HH:mm:ss");
 	
 }
 private: System::Void LblHora_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -590,6 +596,22 @@ private: System::Void BtnHabitaciones_Click(System::Object^ sender, System::Even
 private: System::Void habitacionesToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormHabitaciones^ habitaciones = gcnew FormHabitaciones(sistema);
 	habitaciones->ShowDialog();
+}
+private: System::Void BtnTratamientos_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormTratamiento^ tratamientos = gcnew FormTratamiento(sistema);
+	tratamientos->ShowDialog();
+}
+private: System::Void tratamientosToolStripMenuItem3_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormTratamiento^ tratamientos = gcnew FormTratamiento(sistema);
+	tratamientos->ShowDialog();
+}
+private: System::Void BtnDiagnosticos_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormDiagnosticos^ diagnosticos = gcnew FormDiagnosticos(sistema);
+	diagnosticos->ShowDialog();
+}
+private: System::Void diagnosticosToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormDiagnosticos^ diagnosticos = gcnew FormDiagnosticos(sistema);
+	diagnosticos->ShowDialog();
 }
 };
 }

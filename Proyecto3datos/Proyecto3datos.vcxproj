@@ -144,6 +144,9 @@
     <ClInclude Include="FormCiudades.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormDiagnosticos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormEspecialidades.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -160,6 +163,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormPaises.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormTratamiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Habitaciones.h" />
@@ -179,12 +185,14 @@
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="FormCitas.cpp" />
     <ClCompile Include="FormCiudades.cpp" />
+    <ClCompile Include="FormDiagnosticos.cpp" />
     <ClCompile Include="FormEspecialidades.cpp" />
     <ClCompile Include="FormHabitaciones.cpp" />
     <ClCompile Include="FormHospitalizaciones.cpp" />
     <ClCompile Include="FormMedicos.cpp" />
     <ClCompile Include="FormPacientes.cpp" />
     <ClCompile Include="FormPaises.cpp" />
+    <ClCompile Include="FormTratamiento.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -232,6 +240,9 @@
     <EmbeddedResource Include="FormCiudades.resx">
       <DependentUpon>FormCiudades.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDiagnosticos.resx">
+      <DependentUpon>FormDiagnosticos.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEspecialidades.resx">
       <DependentUpon>FormEspecialidades.h</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaises.resx">
       <DependentUpon>FormPaises.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTratamiento.resx">
+      <DependentUpon>FormTratamiento.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
