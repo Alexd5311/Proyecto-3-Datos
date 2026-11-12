@@ -375,6 +375,22 @@ private:
         return cantidad;
     }
 
+    void ObtenerHabitaciones(
+        pNodoHabitacion nodo,
+        NodoHabitacion** lista,
+        int& cantidad)
+    {
+        if (nodo != nullptr)
+        {
+            ObtenerHabitaciones(nodo->Hizq, lista, cantidad);
+
+            lista[cantidad] = nodo;
+            cantidad++;
+
+            ObtenerHabitaciones(nodo->Hder, lista, cantidad);
+        }
+    }
+
 public:
     ArbolAVLHabitaciones() : raiz(nullptr) {}
 
@@ -431,6 +447,30 @@ public:
         return false;
     }
 
+    NodoHabitacion* ObtenerHabitacion(int IdHabitacion)
+    {
+        pNodoHabitacion actual = raiz;
+
+        while (actual != nullptr)
+        {
+            if (IdHabitacion == actual->IdHabitacion)
+                return actual;
+
+            if (IdHabitacion < actual->IdHabitacion)
+                actual = actual->Hizq;
+            else
+                actual = actual->Hder;
+        }
+
+        return nullptr;
+    }
+
+    void ObtenerTodos(NodoHabitacion** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerHabitaciones(raiz, lista, cantidad);
+    }
+
     bool Eliminar(int IdHabitacion)
     {
         if (!Existe(IdHabitacion))
@@ -478,7 +518,7 @@ public:
 
 ArbolAVLHabitaciones;
 
-void ReporteHabitacionesDisponibles(ArbolAVLHabitaciones& Habitaciones)
+inline void ReporteHabitacionesDisponibles(ArbolAVLHabitaciones& Habitaciones)
 {
     GeneradorPDF pdf("Reporte_Habitaciones_Disponibles.pdf", "REPORTE DE HABITACIONES DISPONIBLES",
         Rellenar("ID", 8) + Rellenar("NUMERO", 8) + Rellenar("PISO", 8)
@@ -497,7 +537,7 @@ void ReporteHabitacionesDisponibles(ArbolAVLHabitaciones& Habitaciones)
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteHabitacionesOcupadas(ArbolAVLHabitaciones& Habitaciones)
+inline void ReporteHabitacionesOcupadas(ArbolAVLHabitaciones& Habitaciones)
 {
     GeneradorPDF pdf("Reporte_Habitaciones_Ocupadas.pdf", "REPORTE DE HABITACIONES OCUPADAS",
         Rellenar("ID", 8) + Rellenar("NUMERO", 8) + Rellenar("PISO", 8)
@@ -516,7 +556,7 @@ void ReporteHabitacionesOcupadas(ArbolAVLHabitaciones& Habitaciones)
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void CargarHabitaciones(ArbolAVLHabitaciones& Habitaciones)
+inline void CargarHabitaciones(ArbolAVLHabitaciones& Habitaciones)
 {
     ifstream archivo("Habitaciones.csv");
     if (!archivo)
@@ -535,6 +575,12 @@ void CargarHabitaciones(ArbolAVLHabitaciones& Habitaciones)
         getline(archivo, TipoTexto, ';') &&
         getline(archivo, EstadoTexto))
     {
+        if (IdHabitacionTexto.empty() || NumeroTexto.empty() ||
+            PisoTexto.empty() || TipoTexto.empty() ||
+            EstadoTexto.empty())
+        {
+            continue;
+        }
         try
         {
             int IdHabitacion = stoi(IdHabitacionTexto);

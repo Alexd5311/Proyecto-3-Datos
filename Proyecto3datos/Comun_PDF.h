@@ -21,7 +21,7 @@ static void HPDF_STDCALL ManejadorErrorPDF(
         << ", detalle " << (int)detail_no << endl;
 }
 
-string Rellenar(string texto, int ancho)
+inline string Rellenar(string texto, int ancho)
 {
     if ((int)texto.length() > ancho - 1)
         texto = texto.substr(0, ancho - 1);

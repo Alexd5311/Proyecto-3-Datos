@@ -76,7 +76,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -138,6 +138,36 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormCitas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormCiudades.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormDiagnosticos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEspecialidades.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormHabitaciones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormHospitalizaciones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormMedicos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormPacientes.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormPaises.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormTratamiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Habitaciones.h" />
     <ClInclude Include="Hospitalizaciones.h" />
     <ClInclude Include="Medicos.h" />
@@ -153,6 +183,16 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="FormCitas.cpp" />
+    <ClCompile Include="FormCiudades.cpp" />
+    <ClCompile Include="FormDiagnosticos.cpp" />
+    <ClCompile Include="FormEspecialidades.cpp" />
+    <ClCompile Include="FormHabitaciones.cpp" />
+    <ClCompile Include="FormHospitalizaciones.cpp" />
+    <ClCompile Include="FormMedicos.cpp" />
+    <ClCompile Include="FormPacientes.cpp" />
+    <ClCompile Include="FormPaises.cpp" />
+    <ClCompile Include="FormTratamiento.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -193,6 +233,36 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
       <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CppCLRWinFormsProject.Form1.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCitas.resx">
+      <DependentUpon>FormCitas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCiudades.resx">
+      <DependentUpon>FormCiudades.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiagnosticos.resx">
+      <DependentUpon>FormDiagnosticos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEspecialidades.resx">
+      <DependentUpon>FormEspecialidades.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHabitaciones.resx">
+      <DependentUpon>FormHabitaciones.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHospitalizaciones.resx">
+      <DependentUpon>FormHospitalizaciones.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMedicos.resx">
+      <DependentUpon>FormMedicos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPacientes.resx">
+      <DependentUpon>FormPacientes.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPaises.resx">
+      <DependentUpon>FormPaises.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTratamiento.resx">
+      <DependentUpon>FormTratamiento.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

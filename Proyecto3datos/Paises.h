@@ -4,6 +4,8 @@
 #include <string>
 #include <fstream>
 #include "Comun_PDF.h"
+#include <vector>
+#include <utility>
 
 using namespace std;
 
@@ -102,6 +104,17 @@ private:
         }
     }
 
+    void ObtenerPaises(NodoPais* nodo, NodoPais** lista, int& cantidad)
+    {
+        if (nodo != NULL)
+        {
+            ObtenerPaises(nodo->izquierdo,lista,cantidad);
+            lista[cantidad] = nodo;
+            cantidad++;
+            ObtenerPaises(nodo->derecho,lista,cantidad);
+        }
+    }
+
 public:
     ArbolABBPaises() {
         raiz = NULL;
@@ -131,6 +144,10 @@ public:
         return true;
     }
 
+    NodoPais* ObtenerPais(int CodPais) {
+        return BuscarNodo(raiz, CodPais);
+    }
+
     bool Eliminar(int CodPais) {
         if (!Existe(CodPais))
             return false;
@@ -154,12 +171,19 @@ public:
         ReporteInorden(raiz, pdf);
     }
 
+    void ObtenerTodos(NodoPais** lista, int& cantidad) {
+        cantidad = 0;
+        ObtenerPaises(raiz, lista, cantidad);
+	}
+
     ~ArbolABBPaises() {
         Liberar(raiz);
     }
+
+
 };
 
-void ReportePaises(ArbolABBPaises& Paises) {
+inline void ReportePaises(ArbolABBPaises& Paises) {
     GeneradorPDF pdf("Reporte_Paises.pdf", "REPORTE DE PAISES",
         Rellenar("CODIGO", 10) + Rellenar("NOMBRE", 40));
 
@@ -179,7 +203,7 @@ void ReportePaises(ArbolABBPaises& Paises) {
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void CargarPaises(ArbolABBPaises& Paises) {
+inline void CargarPaises(ArbolABBPaises& Paises) {
     ifstream archivo("Paises.csv");
 
     if (!archivo) {
@@ -199,9 +223,12 @@ void CargarPaises(ArbolABBPaises& Paises) {
         if (separador != string::npos) {
             string codPaisTexto = linea.substr(0, separador);
             string Nombre = linea.substr(separador + 1);
+            if (codPaisTexto.empty() || Nombre.empty())
+                continue;
             int CodPais = stoi(codPaisTexto);
             Paises.Insertar(CodPais, Nombre);
         }
+
     }
 
     archivo.close();

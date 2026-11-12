@@ -499,7 +499,20 @@ private:
 
         ReportePDFPorMedicoRecursivo(pdf, nodo->Hijoder, IdMedico, cantidad);
     }
+    void ObtenerHospitalizaciones(
+        NodoHospitalizacion* nodo,
+        NodoHospitalizacion** lista,
+        int& cantidad)
+    {
+        if (nodo != NULL)
+        {
+            ObtenerHospitalizaciones(nodo->Hijoizq, lista, cantidad);
 
+            lista[cantidad] = nodo;
+            cantidad++;
+            ObtenerHospitalizaciones(nodo->Hijoder, lista, cantidad);
+        }
+    }
 
 public:
     
@@ -527,6 +540,12 @@ public:
         }
 		return NULL;
 	}
+
+    void ObtenerTodos(NodoHospitalizacion** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerHospitalizaciones(primero, lista, cantidad);
+    }
 
     bool InsertarHospitalizacion(int IdHospitalizacion,int IdPaciente, int IdHabitacion, int IdMedico,string FechaIngreso, string FechaSalida, string Motivo)
     {
@@ -688,7 +707,7 @@ public:
 
 };
 
-void ReporteHospitalizaciones(ArbolRNHospitalizaciones& Hospitalizaciones)
+inline void ReporteHospitalizaciones(ArbolRNHospitalizaciones& Hospitalizaciones)
 {
     GeneradorPDF pdf(
         "Reporte_Hospitalizaciones.pdf",
@@ -716,7 +735,7 @@ void ReporteHospitalizaciones(ArbolRNHospitalizaciones& Hospitalizaciones)
         cout << "No se pudo guardar el archivo PDF." << endl;
 }
 
-void ReporteHospitalizacionesPorMedico(ArbolRNHospitalizaciones& Hospitalizaciones)
+inline void ReporteHospitalizacionesPorMedico(ArbolRNHospitalizaciones& Hospitalizaciones)
 {
     int IdMedico;
 
@@ -759,7 +778,7 @@ void ReporteHospitalizacionesPorMedico(ArbolRNHospitalizaciones& Hospitalizacion
 //║                    CARGAR HOSPITALIZACIONES                                ║
 //╚═════════════════════════════════════════════════════════════════════════════╝
 
-void CargarHospitalizaciones(ArbolRNHospitalizaciones &Hospitalizaciones, ArbolBPacientes &Pacientes, 
+inline void CargarHospitalizaciones(ArbolRNHospitalizaciones &Hospitalizaciones, ArbolBPacientes &Pacientes,
     ArbolAVLHabitaciones &Habitaciones, ArbolBMedicos &Medicos)
 {
     ifstream archivo("Hospitalizaciones.csv");
@@ -787,6 +806,17 @@ void CargarHospitalizaciones(ArbolRNHospitalizaciones &Hospitalizaciones, ArbolB
             getline(archivo, FechaSalida, ';') &&
             getline(archivo, Motivo))
     {
+        if (IdHospitalizacionTexto.empty() ||
+            IdPacienteTexto.empty() ||
+            IdHabitacionTexto.empty() ||
+            IdMedicoTexto.empty() ||
+            FechaIngreso.empty() ||
+            FechaSalida.empty() ||
+            Motivo.empty())
+        {
+            continue;
+        }
+
         int IdHospitalizacion = stoi(IdHospitalizacionTexto);
         int IdPaciente = stoi(IdPacienteTexto);
         int IdHabitacion = stoi(IdHabitacionTexto);

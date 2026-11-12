@@ -68,6 +68,36 @@
     <ClInclude Include="SistemaPrincipal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FormPaises.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormCiudades.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormMedicos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormPacientes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormEspecialidades.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormCitas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormHospitalizaciones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormHabitaciones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormTratamiento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormDiagnosticos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -80,6 +110,36 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Form1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormPaises.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormCiudades.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormMedicos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormPacientes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormEspecialidades.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormCitas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormHospitalizaciones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormHabitaciones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormTratamiento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormDiagnosticos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

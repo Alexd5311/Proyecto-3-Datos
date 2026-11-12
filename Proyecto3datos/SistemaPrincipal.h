@@ -11,7 +11,6 @@
 #include "Hospitalizaciones.h"
 #include "Tratamiento.h"
 #include "Diagnostico.h"
-#include "Operaciones.h"
 
 class SistemaHospitalario
 {

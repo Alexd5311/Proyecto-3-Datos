@@ -155,6 +155,17 @@ private:
         }
     }
 
+    void ObtenerCiudades(pnodoCiudad actual, NodoCiudad** lista, int& cantidad)
+    {
+        if (actual != NULL)
+        {
+            ObtenerCiudades(actual->izquierdo, lista, cantidad);
+            lista[cantidad] = actual;
+            cantidad++;
+            ObtenerCiudades(actual->derecho, lista, cantidad);
+        }
+    }
+
 public:
     ArbolABBCiudades() {
         raiz = NULL;
@@ -228,9 +239,20 @@ public:
     int ReportePDF(GeneradorPDF& pdf, int CodPais) {
         return ReporteInorden(raiz, pdf, CodPais);
     }
+
+    NodoCiudad* ObtenerCiudad(int CodPais, int CodCiudad)
+    {
+        return BuscarNodo(raiz, CodPais, CodCiudad);
+    }
+    void ObtenerTodos(NodoCiudad** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerCiudades(raiz, lista, cantidad);
+    }
+
 };
 
-void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {
+inline void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {
     int CodPais;
     cout << endl;
     cout << "Ingrese el CodPais: ";
@@ -260,7 +282,7 @@ void ReporteCiudades(ArbolABBCiudades& Ciudades, ArbolABBPaises& Paises) {
 }
 
 
-void CargarCiudades(ArbolABBCiudades &Ciudades, ArbolABBPaises &Paises){
+inline void CargarCiudades(ArbolABBCiudades &Ciudades, ArbolABBPaises &Paises){
     ifstream archivo("Ciudades.csv");
     if (!archivo){
         cout << "No se pudo abrir el archivo Ciudades.csv" << endl;
@@ -286,6 +308,9 @@ void CargarCiudades(ArbolABBCiudades &Ciudades, ArbolABBPaises &Paises){
                         separador2 - separador1 - 1
                     );
                     Nombre = linea.substr(separador2 + 1);
+                    if (codPaisTexto.empty() || codCiudadTexto.empty() ||
+                        Nombre.empty())
+                        continue;
                     int CodPais = stoi(codPaisTexto);
                     int CodCiudad = stoi(codCiudadTexto);
                     if (!Paises.Existe(CodPais))

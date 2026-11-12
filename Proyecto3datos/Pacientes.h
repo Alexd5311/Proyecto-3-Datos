@@ -424,6 +424,18 @@ public:
         return true;
     }
 
+    RegistroPaciente* ObtenerPaciente(int IdPaciente)
+    {
+        return BuscarRegistro(Raiz, IdPaciente);
+    }
+
+    vector<RegistroPaciente> ObtenerTodos()
+    {
+        vector<RegistroPaciente> registros;
+        Recopilar(Raiz, registros);
+        return registros;
+    }
+
     
     bool Eliminar(int IdPaciente)
     {
@@ -558,7 +570,7 @@ public:
 
 
 
-void ReportePacientesPorCiudad(
+inline void ReportePacientesPorCiudad(
     ArbolBPacientes& Pacientes,
     ArbolABBCiudades& Ciudades)
 {
@@ -617,7 +629,7 @@ void ReportePacientesPorCiudad(
 }
 
 
-void ReportePDFPacientesPorPais(ArbolBPacientes& Pacientes,
+inline void ReportePDFPacientesPorPais(ArbolBPacientes& Pacientes,
     ArbolABBPaises& Paises)
 {
     int CodPais;
@@ -663,7 +675,7 @@ void ReportePDFPacientesPorPais(ArbolBPacientes& Pacientes,
 //║                         CARGAR PACIENTES                             ║
 //╚══════════════════════════════════════════════════════════════════════╝
 
-void CargarPacientes(ArbolBPacientes& Pacientes, ArbolABBCiudades& Ciudades)
+inline void CargarPacientes(ArbolBPacientes& Pacientes, ArbolABBCiudades& Ciudades)
 {
     ifstream archivo("Pacientes.csv");
     if (!archivo)
@@ -686,6 +698,13 @@ void CargarPacientes(ArbolBPacientes& Pacientes, ArbolABBCiudades& Ciudades)
         getline(archivo, CodCiudadTexto, ';') &&
         getline(archivo, Correo))
     {
+        if (IdPacienteTexto.empty() || Nombre.empty() ||
+            FechaNacimiento.empty() || Telefono.empty() ||
+            CodPaisTexto.empty() || CodCiudadTexto.empty() ||
+            Correo.empty())
+        {
+            continue;
+        }
         try
         {
             int IdPaciente = stoi(IdPacienteTexto);

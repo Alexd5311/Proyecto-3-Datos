@@ -389,6 +389,22 @@ private:
             ContarTratamientos(nodo->Hijoder);
     }
 
+    void ObtenerTratamientos(
+        NodoTratamiento* nodo,
+        NodoTratamiento** lista,
+        int& cantidad)
+    {
+        if (nodo != nullptr)
+        {
+            ObtenerTratamientos(nodo->Hijoizq, lista, cantidad);
+
+            lista[cantidad] = nodo;
+            cantidad++;
+
+            ObtenerTratamientos(nodo->Hijoder, lista, cantidad);
+        }
+    }
+
 public:
 
 
@@ -473,6 +489,17 @@ public:
              << nodo->Costo << endl;
 
         return true;
+    }
+
+    NodoTratamiento* ObtenerTratamiento(int id)
+    {
+        return BuscarNodo(primero, id);
+    }
+
+    void ObtenerTodos(NodoTratamiento** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerTratamientos(primero, lista, cantidad);
     }
 
     bool Modificar(
@@ -620,6 +647,11 @@ inline void CargarTratamientos(ArbolRNTratamientos& Tratamientos)
            getline(archivo, Descripcion, ';') &&
            getline(archivo, costoTexto))
     {
+        if (idTexto.empty() || Nombre.empty() ||
+            Descripcion.empty() || costoTexto.empty())
+        {
+            continue;
+        }
         try
         {
             int IdTratamiento = stoi(idTexto);

@@ -237,6 +237,21 @@ private:
 
         ReportePDFRec(nodo->der, pdf);
     }
+    void ObtenerDiagnosticos(
+        NodoDiagnostico* nodo,
+        NodoDiagnostico** lista,
+        int& cantidad)
+    {
+        if (nodo != nullptr)
+        {
+            ObtenerDiagnosticos(nodo->izq, lista, cantidad);
+
+            lista[cantidad] = nodo;
+            cantidad++;
+
+            ObtenerDiagnosticos(nodo->der, lista, cantidad);
+        }
+    }
 
 public:
     ArbolAADiagnostico()
@@ -273,6 +288,17 @@ public:
              << encontrado->Descripcion << endl;
 
         return true;
+    }
+
+    NodoDiagnostico* ObtenerDiagnostico(string id)
+    {
+        return BuscarRec(raiz, id);
+    }
+
+    void ObtenerTodos(NodoDiagnostico** lista, int& cantidad)
+    {
+        cantidad = 0;
+        ObtenerDiagnosticos(raiz, lista, cantidad);
     }
 
     bool Insertar(string id, string nombre, string descripcion)
@@ -356,6 +382,11 @@ inline void CargarDiagnosticos(ArbolAADiagnostico& Diagnosticos)
         getline(archivo, nombre, ';') &&
         getline(archivo, descripcion))
     {
+        if (id.empty() || nombre.empty() ||
+            descripcion.empty())
+        {
+            continue;
+        }
         if (!descripcion.empty() && descripcion.back() == '\r')
             descripcion.pop_back();
 
