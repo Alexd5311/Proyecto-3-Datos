@@ -717,6 +717,13 @@ inline void CargarCitas(ArbolAVLCitas& Citas, ArbolBPacientes& Pacientes,
         getline(archivo, Fecha, ';') && getline(archivo, Hora, ';') &&
         getline(archivo, Motivo, ';') && getline(archivo, Estado))
     {
+        if (IdCitaTexto.empty() || IdPacienteTexto.empty() ||
+            IdMedicoTexto.empty() || IdEspecialidadTexto.empty() ||
+            Fecha.empty() || Hora.empty() || Motivo.empty() ||
+            Estado.empty())
+        {
+            continue;
+        }
         try
         {
             int IdCita = stoi(IdCitaTexto);

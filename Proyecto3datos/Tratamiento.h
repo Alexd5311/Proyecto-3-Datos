@@ -647,6 +647,11 @@ inline void CargarTratamientos(ArbolRNTratamientos& Tratamientos)
            getline(archivo, Descripcion, ';') &&
            getline(archivo, costoTexto))
     {
+        if (idTexto.empty() || Nombre.empty() ||
+            Descripcion.empty() || costoTexto.empty())
+        {
+            continue;
+        }
         try
         {
             int IdTratamiento = stoi(idTexto);

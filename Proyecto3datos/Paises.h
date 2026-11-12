@@ -223,9 +223,12 @@ inline void CargarPaises(ArbolABBPaises& Paises) {
         if (separador != string::npos) {
             string codPaisTexto = linea.substr(0, separador);
             string Nombre = linea.substr(separador + 1);
+            if (codPaisTexto.empty() || Nombre.empty())
+                continue;
             int CodPais = stoi(codPaisTexto);
             Paises.Insertar(CodPais, Nombre);
         }
+
     }
 
     archivo.close();

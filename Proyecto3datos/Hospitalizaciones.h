@@ -806,6 +806,17 @@ inline void CargarHospitalizaciones(ArbolRNHospitalizaciones &Hospitalizaciones,
             getline(archivo, FechaSalida, ';') &&
             getline(archivo, Motivo))
     {
+        if (IdHospitalizacionTexto.empty() ||
+            IdPacienteTexto.empty() ||
+            IdHabitacionTexto.empty() ||
+            IdMedicoTexto.empty() ||
+            FechaIngreso.empty() ||
+            FechaSalida.empty() ||
+            Motivo.empty())
+        {
+            continue;
+        }
+
         int IdHospitalizacion = stoi(IdHospitalizacionTexto);
         int IdPaciente = stoi(IdPacienteTexto);
         int IdHabitacion = stoi(IdHabitacionTexto);

@@ -308,6 +308,9 @@ inline void CargarCiudades(ArbolABBCiudades &Ciudades, ArbolABBPaises &Paises){
                         separador2 - separador1 - 1
                     );
                     Nombre = linea.substr(separador2 + 1);
+                    if (codPaisTexto.empty() || codCiudadTexto.empty() ||
+                        Nombre.empty())
+                        continue;
                     int CodPais = stoi(codPaisTexto);
                     int CodCiudad = stoi(codCiudadTexto);
                     if (!Paises.Existe(CodPais))

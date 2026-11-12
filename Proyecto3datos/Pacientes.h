@@ -698,6 +698,13 @@ inline void CargarPacientes(ArbolBPacientes& Pacientes, ArbolABBCiudades& Ciudad
         getline(archivo, CodCiudadTexto, ';') &&
         getline(archivo, Correo))
     {
+        if (IdPacienteTexto.empty() || Nombre.empty() ||
+            FechaNacimiento.empty() || Telefono.empty() ||
+            CodPaisTexto.empty() || CodCiudadTexto.empty() ||
+            Correo.empty())
+        {
+            continue;
+        }
         try
         {
             int IdPaciente = stoi(IdPacienteTexto);

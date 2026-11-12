@@ -341,7 +341,13 @@ inline void CargarEspecialidades(ArbolAAEspecialidades& Especialidades)
     while (getline(archivo, idTexto, ';') &&
         getline(archivo, nombre, ';') &&
         getline(archivo, descripcion))
+
     {
+        if (idTexto.empty() || nombre.empty() ||
+            descripcion.empty())
+        {
+            continue;
+        }
         try
         {
             int id = stoi(idTexto);

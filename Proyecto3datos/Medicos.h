@@ -459,6 +459,12 @@ inline void CargarMedicos(ArbolBMedicos& Medicos, ArbolAAEspecialidades& Especia
         getline(archivo, Telefono, ';') &&
         getline(archivo, Correo, ';') &&
         getline(archivo, IdEspecialidadTexto)) {
+        if (IdMedicoTexto.empty() || Nombre.empty() ||
+            Telefono.empty() || Correo.empty() ||
+            IdEspecialidadTexto.empty())
+        {
+            continue;
+        }
         try {
             int IdMedico = stoi(IdMedicoTexto);
             int IdEspecialidad = stoi(IdEspecialidadTexto);

@@ -382,6 +382,11 @@ inline void CargarDiagnosticos(ArbolAADiagnostico& Diagnosticos)
         getline(archivo, nombre, ';') &&
         getline(archivo, descripcion))
     {
+        if (id.empty() || nombre.empty() ||
+            descripcion.empty())
+        {
+            continue;
+        }
         if (!descripcion.empty() && descripcion.back() == '\r')
             descripcion.pop_back();
 

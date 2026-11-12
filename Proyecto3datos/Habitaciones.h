@@ -575,6 +575,12 @@ inline void CargarHabitaciones(ArbolAVLHabitaciones& Habitaciones)
         getline(archivo, TipoTexto, ';') &&
         getline(archivo, EstadoTexto))
     {
+        if (IdHabitacionTexto.empty() || NumeroTexto.empty() ||
+            PisoTexto.empty() || TipoTexto.empty() ||
+            EstadoTexto.empty())
+        {
+            continue;
+        }
         try
         {
             int IdHabitacion = stoi(IdHabitacionTexto);
